@@ -519,7 +519,6 @@ export default function App() {
                         <p className="eyebrow">မြန်မာဆေးဆိုင် POS</p>
                         <h1>Medicine Inventory & Checkout</h1>
                         <p className="hero-text">
-                            User account တစ်ခုချင်းစီအတွက် inventory, checkout, sales history ကို Supabase database ထဲမှာ သိမ်းထားပေးသော full-stack system။
                         </p>
                     </div>
 
