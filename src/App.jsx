@@ -213,7 +213,7 @@ export default function App() {
         const quantity = Number(medicineQuantity);
 
         if (!name || price <= 0 || quantity < 0 || !Number.isFinite(price) || !Number.isFinite(quantity)) {
-            showMessage("ဆေးနာမည်၊ ဈေးနှုန်း၊ အရေအတွက်ကို မှန်မှန်ထည့်ပါ။");
+            showMessage("ဆေးနာမည်၊ ဈေးနှုန်း၊ အရေအတွက်။");
             return;
         }
 
@@ -239,7 +239,7 @@ export default function App() {
                     return;
                 }
 
-                showMessage("ရှိပြီးသားဆေးကို stock ထပ်တိုးပြီး ဈေးနှုန်း update လုပ်ပြီးပါပြီ။");
+                showMessage("ရှိပြီးသားဆေးကို stock ထပ်တိုးပြီး ဈေးနှုန်း updateပြီ။");
             } else {
                 const { error } = await supabase.from("medicines").insert({
                     user_id: userId,
@@ -253,7 +253,7 @@ export default function App() {
                     return;
                 }
 
-                showMessage("ဆေးအသစ်ကို Supabase database ထဲသို့ သိမ်းပြီးပါပြီ။");
+                showMessage("ဆေးအသစ်ကို သိမ်းပြီးပါပြီ။");
             }
 
             setMedicineName("");
@@ -337,7 +337,7 @@ export default function App() {
         }
 
         if (nextQuantity > medicine.quantity) {
-            showMessage("Stock ထက် ပိုမရောင်းနိုင်ပါ။");
+            showMessage("Stock ထက် ပိုမရောင်းပါ။");
             return;
         }
 
@@ -430,7 +430,7 @@ export default function App() {
 
             setCart([]);
             setPaymentAmount("");
-            showMessage("Checkout အောင်မြင်ပါပြီ။ Sale history သိမ်းပြီး stock update လုပ်ပြီးပါပြီ။");
+            showMessage("Checkout. Sale history သိမ်းပြီး stock update လုပ်ပြီးပါပြီ။");
             await loadAllData();
             setPage("sales");
         } finally {
@@ -449,7 +449,7 @@ export default function App() {
                     <p className="eyebrow dark">Medicine POS</p>
                     <h1>{authMode === "login" ? "Welcome back" : "Create account"}</h1>
                     <p className="muted auth-copy">
-                        ဆေး Inventory, Checkout, Sales History ကို Supabase database ထဲတွင် secure သိမ်းရန် login ဝင်ပါ။
+                        ဆေး Inventory, Checkout, Sales History ကို  database ထဲတွင်သိမ်းရန် login ဝင်ပါ။
                     </p>
 
                     {message && <div className="message">{message}</div>}
